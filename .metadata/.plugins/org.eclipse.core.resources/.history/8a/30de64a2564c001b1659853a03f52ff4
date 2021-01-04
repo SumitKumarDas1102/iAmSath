@@ -1,0 +1,47 @@
+package com.iamsath.qa.testcases;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.iamsath.qa.base.TestBase;
+import com.iamsath.qa.pages.LoginPage;
+
+public class LoginPageTest extends TestBase {
+	
+	public LoginPageTest() {
+		super();
+	}
+	
+	@BeforeMethod
+	public void setup() {
+		initialization();
+		LoginPage lp = new LoginPage();
+	}
+	
+	
+	@Test
+	public void LoginPageHeaderTest() {
+		lp
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
+
+}

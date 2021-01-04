@@ -1,0 +1,38 @@
+package com.iamsath.qa.pages;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import com.iamsath.qa.base.TestBase;
+
+public class CatalogPage extends TestBase {
+	
+	@FindBy(xpath = "//input[@placeholder=\"Search Application, Entitlement, User or Role\"]")
+	WebElement searchBox;
+
+	
+	
+	
+	
+	public boolean isSearchfiledVisible() {
+		return searchBox.isDisplayed();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+

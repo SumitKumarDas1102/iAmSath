@@ -1,0 +1,24 @@
+package com.iamsath.qa.testcases;
+
+import com.iamsath.qa.base.TestBase;
+import com.iamsath.qa.pages.CatalogPage;
+import com.iamsath.qa.pages.DashboardPage;
+import com.iamsath.qa.pages.LoginPage;
+
+public class DashboardPageTest extends TestBase {
+	LoginPage lp;
+	DashboardPage dp;
+	CatalogPage cp;
+	
+	
+	public DashboardPageTest() {
+		super();
+	}
+	
+	
+	
+	
+	
+	
+
+}

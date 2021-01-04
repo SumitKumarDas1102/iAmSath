@@ -1,0 +1,59 @@
+package com.iamsath.qa.pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.iamsath.qa.base.TestBase;
+
+public class LoginPage extends TestBase {
+	
+	//Login page object repository
+	
+	@FindBy(xpath="//h1[contains(text(),'Login to your account')]")
+	private WebElement headerContent;
+	
+	@FindBy(xpath="//input[@id='kc-login']")
+	private WebElement loginButton;
+	
+	@FindBy(xpath="//input[@name='username']")
+	private WebElement userName;
+	
+	@FindBy(xpath="//input[@id='password']")
+	private WebElement passWord;
+	
+	
+	
+	public LoginPage() {
+		PageFactory.initElements(driver, this);
+	}
+	
+	public boolean isLoaginHeaderVisible() {
+		return headerContent.isDisplayed();		
+	}
+	
+	public boolean isLoginButtonVisible() {
+		return loginButton.isDisplayed();		
+	}
+	
+	public String validateHeaderContent() {
+		return headerContent.getText();
+	}
+	
+	public DashboardPage loginFunction(String uName, String pd) {
+		userName.sendKeys(uName);
+		passWord.sendKeys(pd);
+		loginButton.click();
+		return new DashboardPage();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

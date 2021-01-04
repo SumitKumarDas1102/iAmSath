@@ -1,0 +1,13 @@
+package com.iamsath.qa.util;
+
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.iamsath.qa.base.TestBase;
+
+public class TestUtil extends TestBase{
+	public static long Page_load_timeout = 100;
+	public static long implicit_wait = 50;
+	public static long explicit_wait = 60;
+	
+	
+}

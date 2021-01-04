@@ -1,0 +1,15 @@
+package com.iamsath.qa.testcases;
+
+import org.testng.annotations.BeforeMethod;
+
+import com.iamsath.qa.base.TestBase;
+
+public class LoginPageTest extends TestBase {
+	
+	@BeforeMethod
+	public void setup() {
+		initialization();
+		
+	}
+
+}

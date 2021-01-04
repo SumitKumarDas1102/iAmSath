@@ -1,0 +1,54 @@
+package com.iamsath.qa.testcases;
+
+import java.util.concurrent.TimeUnit;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.iamsath.qa.base.TestBase;
+import com.iamsath.qa.pages.LoginPage;
+import com.iamsath.qa.util.TestUtil;
+
+public class LoginPageTest extends TestBase {
+	LoginPage lp;
+	
+	public LoginPageTest() {
+		super();
+	}
+	
+	@BeforeMethod
+	public void setup() throws Exception {
+		initialization();
+		lp = new LoginPage();
+	}
+	
+	@Test
+	public void LoginPageHeaderTest() {
+		String pageTitle = lp.validatePageTitle();
+		Assert.assertEquals(pageTitle, "Log in to IDHub");
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	@AfterMethod
+	 public void tearDown() {
+	      driver.quit();
+	  }
+}

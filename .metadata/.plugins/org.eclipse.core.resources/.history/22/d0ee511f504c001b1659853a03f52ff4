@@ -1,0 +1,5 @@
+package com.iamsath.qa.pages;
+
+public class CatalogPage {
+
+}

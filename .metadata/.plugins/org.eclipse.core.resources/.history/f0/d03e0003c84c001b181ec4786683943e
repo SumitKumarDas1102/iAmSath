@@ -1,0 +1,54 @@
+package com.iamsath.qa.pages;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import com.iamsath.qa.base.TestBase;
+
+public class CatalogPage extends TestBase {
+	
+	public static TestData td;
+	
+	@FindBy(xpath = "//input[@placeholder=\"Search Application, Entitlement, User or Role\"]")
+	WebElement searchBox;
+
+	
+	
+	public TestData() {
+		try {
+			td = new Properties();
+			FileInputStream ip = new  FileInputStream("D:\\QA_Work\\selenium_iAmSath\\IamSathTest\\src\\main\\java\\com\\iamsath\\qa\\testdata\\NessearyTestData");
+			td.load(ip);			
+		} catch(FileNotFoundException e) {
+			e.printStackTrace();	
+	} catch(IOException e) {
+		e.printStackTrace();
+		}
+	}
+	
+	public static void TestData() {
+		String searchString = 
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+

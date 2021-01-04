@@ -1,0 +1,27 @@
+package com.iamsath.qa.pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import com.iamsath.qa.base.TestBase;
+
+public class LoginPage extends TestBase {
+	
+	//Login page object repository
+	
+	@FindBy(id="kc-page-title")
+	WebElement pageTitle;
+	
+	@FindBy(xpath="//h1[contains(text(),'Login to your account')]")
+	WebElement headerContent;
+	
+	@FindBy(xpath="//input[@id='kc-login']")
+	WebElement loginButton;
+	
+	@FindBy(xpath="//input[@name='username']")
+	WebElement userName;
+	
+	@FindBy(xpath="//input[@id='password']")
+	WebElement passWord;
+
+}

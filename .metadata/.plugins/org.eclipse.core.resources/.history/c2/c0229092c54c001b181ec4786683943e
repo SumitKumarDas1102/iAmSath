@@ -1,0 +1,48 @@
+package com.iamsath.qa.pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.iamsath.qa.base.TestBase;
+
+public class DashboardPage extends TestBase {
+	
+	@FindBy(xpath="//img[@class='logo']")
+	WebElement dashboardLogo;
+	
+	@FindBy(xpath="//div[contains(text(),'Request New Access')]")
+	WebElement requestNewAccess;
+	
+	@FindBy(xpath="//span[contains(text(),'Request Access')]")
+	WebElement requestNewAccessButton;
+	
+	
+	public DashboardPage() {
+		PageFactory.initElements(driver, this);
+	}
+	
+	public boolean isLogoVisible() {
+		return dashboardLogo.isDisplayed();
+		
+	}
+	
+	public String validateNewReqAccess() {
+		requestNewAccess.isDisplayed();
+		return requestNewAccess.getText();
+	}
+	
+	public CatalogPage validateNewAccessButton() {
+		requestNewAccessButton.click();
+		return new CatalogPage();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+
+}
